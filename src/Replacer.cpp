@@ -35,7 +35,7 @@ bool Replacer::replace(wstring inDocPath, wstring outDocPath, wstring replacemen
   while (true) {
     try {
       getline(inFile, line);
-      outDoc += line;
+      outDoc += line + "\n";
     } catch (ifstream::failure ex) {
       if (inFile.eof()) {
         break;
