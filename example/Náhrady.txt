@@ -1,0 +1,23 @@
+# V seznamech odstraní nadbytečné odstavce
+<li><p>(.*?)</p></li>
+<li>$1</li>
+
+# U nadpisů úrovně 2 a vyšších odstraní všechny atributy
+<h([2-6])(.*?)>
+<h$1>
+
+# U odkazů odstraní všechny atributy kromě href a udělá je externí:
+<a (.*?)href="http([^"]*?)"(.*?)>
+<a href="http$2" target="_blank">
+
+# Z odkazů odstraní nadbytečné <em> elementy
+<a (.*?)><em>(.*?)</em></a>
+<a $1>$2</a>
+
+# U nečíslovaných seznamů odstraní všechny atributy a nastaví styl odrážek na čtverečky
+<ul(.*?)>
+<ul style="list-style-type: square">
+
+# U nečíslovaných seznamů odstraní všechny atributy
+#<ul(.*?)>
+#<ul>
