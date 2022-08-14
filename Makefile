@@ -1,4 +1,4 @@
-TARGET = bin/regex-replacer
+TARGET = bin/FileLineReplacer
 HEADERS = src/*.h
 SOURCES = src/*.cpp
 CFLAGS = -municode -g -static-libgcc -static-libstdc++ #-Wall -Werror -pedantic -pedantic-errors
